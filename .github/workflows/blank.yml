@@ -19,8 +19,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: install speedtest command line tool
-        run: sudo apt-get install curl; curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash; sudo apt-get update; sudo apt-get install speedtest
-
-      - name: use speedtest cli tool
-        run: speedtest
+      - name: nws.sh speedtest script
+        run: curl -sL nws.sh | bash
